@@ -97,6 +97,11 @@ jobs:
   release:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+      id-token: write
+      attestations: write
     steps:
 
     - uses: actions/checkout@v7
